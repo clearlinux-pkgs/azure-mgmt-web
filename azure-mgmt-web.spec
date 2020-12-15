@@ -4,7 +4,7 @@
 #
 Name     : azure-mgmt-web
 Version  : 0.46.0
-Release  : 8
+Release  : 9
 URL      : https://files.pythonhosted.org/packages/bd/c2/b6ef2087292a0d9f50ef30ed162aee23360164953989e1f3d1e4a95efd20/azure-mgmt-web-0.46.0.zip
 Source0  : https://files.pythonhosted.org/packages/bd/c2/b6ef2087292a0d9f50ef30ed162aee23360164953989e1f3d1e4a95efd20/azure-mgmt-web-0.46.0.zip
 Summary  : Microsoft Azure Web Apps Management Client Library for Python
@@ -75,8 +75,8 @@ echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 ## Remove excluded files
-rm -f %{buildroot}/usr/lib/python3.9/site-packages/azure/mgmt/__init__.py
-rm -f %{buildroot}/usr/lib/python3.9/site-packages/azure/mgmt/__pycache__/__init__.cpython-38.pyc
+rm -f %{buildroot}/usr/lib/python3*/site-packages/azure/mgmt/__init__.py
+rm -f %{buildroot}/usr/lib/python3*/site-packages/azure/mgmt/__pycache__/__init__.cpython-3*.pyc
 
 %files
 %defattr(-,root,root,-)
